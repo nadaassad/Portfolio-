@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #080800;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Logo {
+    width: 140px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #7C5CFF;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+
+}
+
+.header {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header h1 span {
+    color: #7C5CFF;
+}
+
+/* ///////////////////////////////// */
+
+.About {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    /* a bit more breathing space */
+    padding: 50px 10%;
+    /* nice spacing from edges */
+}
+
+.about-img img {
+    width: 100%;
+    max-width: 350px;
+    /* control image size */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+    text-align: left;
+    /* text stays left-aligned inside the right column */
+}
+
+.about-text h2 {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.about-text h2 span {
+    color: #7C5CFF;
+    /* highlight 'Me' */
+}
+
+.about-text h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #7C5CFF;
+    /* accent for subtitle */
+    margin: 15px 0 25px;
+}
+
+.about-text p {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.about-text strong,
+.about-text span {
+    color: #7C5CFF;
+    /* highlight skills & keywords */
+}
+
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border: 2px solid #7C5CFF;
+    /* دائرة */
+    border-radius: 50%;
+    font-size: 22px;
+    color: #7C5CFF;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #7C5CFF;
+    /* لون الدائرة يتملأ */
+    color: #fff;
+    /* الأيقونة تبقى بيضاء */
+    transform: scale(1.1);
+    /* تكبر شوية */
+}
+
+/* Buttons under icons */
+.buttons {
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #7C5CFF;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #7C5CFF;
+}
+
+.btn-outline {
+    padding: 12px 25px;
+    border: 2px solid #7C5CFF;
+    border-radius: 25px;
+    color: #a1005f;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: #7C5CFF;
+    color: #fff;
+}
+
+.skills {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: #080800;
+    color: #fff;
+}
+
+.skills h2 {
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.skills h2 span {
+    color: #7C5CFF;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+
+
+
+.skill-card {
+    background: #111;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.skill-card {
+    font-size: 35px;
+
+    color: #7C5CFF;
+    margin-bottom: 15px;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    background: #080800;
+}
+
+#experience {
+    background: #080800;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.experience h2 span {
+    color: #7C5CFF;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    min-width: 300px;
+    margin: 0 10px;
+    background: #080800;
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid #7C5CFF;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 40%;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+.experience {
+    background: #111;
+    color: #fff;
+    padding: 60px;
+}
+
+.experience h2 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.timeline-item {
+    background: #1a1a1a;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    /* glowing effect أقل حدة */
+    box-shadow: 0 0 5px #7C5CFF, 0 0 10px #F7A5A5, 0 0 15px #F7A5A5;
+    border: 1px solid #00dfc4;
+}
+
+/* Optional: نص مع إضاءة أهدى */
+.timeline-item:hover h3 {
+    color: #7C5CFF;
+    text-shadow: 0 0 3px #7C5CFF, 0 0 6px #7C5CFF, 0 0 10px #7C5CFF;
+}
+
+
+.timeline-item h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #7C5CFF;
+}
+
+.timeline-item span {
+    font-size: 16px;
+    color: #bbb;
+    display: block;
+    margin-bottom: 10px;
+}
