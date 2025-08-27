@@ -13,19 +13,20 @@
 </head>
 
 <body>
+
+    <nav>
+        <img src="logo.png" class="Logo">
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <div id="header">
         <div class="container">
-            <nav>
-                <img src="logo.png" class="Logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Education</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Projects</a></li>
-                </ul>
-            </nav>
             <div class="header">
                 <p>Full Stack Develober</p>
                 <h1>Hi, It's <span>Nada</span><br>Assad From Egypt</h1>
@@ -67,7 +68,7 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
         <h2>My <span>Skills</span></h2>
         <div>
             <div class="skill-grid">
@@ -172,6 +173,93 @@
                         SQL</strong>.</p>
             </div>
 
+
+        </div>
+    </section>
+
+
+    <section class="projects" id="projects">
+        <h2>My <span>Projects</span></h2>
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>Learning Management System (LMS)</h3>
+                <span>Team Project</span>
+                <p>Built an online learning platform that enables course management, student enrollment,
+                    and progress tracking.
+                    Implemented using <strong>Java, Spring Boot</strong>.</p>
+                <div class="project-links">
+                    <a href="https://github.com/tasneem821/advanceds" target="_blank">💻 GitHub</a>
+                </div>
+            </div>
+
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>Tic-Tac-Toe Game with Multiple Modes</h3>
+                <span>Team Project</span>
+                <p>Developed an advanced Tic-Tac-Toe game offering multiple board types and play modes,
+                    including classic 3×3, pyramid shape, four-in-a-row, and 5×5 grid. Players can play against each
+                    other or against a computer opponent using random AI. Built in C++ with modular architecture across
+                    header and game-manager classes.</p>
+                <div class="project-links">
+                    <a href="https://github.com/Norrhan2/Tic-Tac-Toe_Game" target="_blank">💻 GitHub</a>
+                </div>
+            </div>
+
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <h3>Image Processing Application</h3>
+                <span>Team Project</span>
+                <p>
+                    Built a C++ console-based program that applies multiple image filters and transformations
+                    on grayscale BMP images. Implemented features such as
+                    <strong>Black & White, Invert, Merge, Rotate, Blur, Edge Detection, Skew, Shrink</strong>,
+                    and more. Users interact via a menu-driven interface.
+                </p>
+                <p>
+                    <strong>Tech Stack:</strong> C++, Algorithms, File Handling, Image Processing (BMP).
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/nadaassad/Assignment_1" target="_blank">💻 GitHub</a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+    <section class="contact" id="contact">
+        <h2>Contact <span>Me</span></h2>
+
+        <div class="contact-container">
+            <!-- contact info -->
+            <section class="contact" id="contact">
+                <h2>Contact <span>Me</span></h2>
+
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/nada-assad-aa2607260/" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/nadaassad" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/nadaassad_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100077083161355" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                </div>
+
+                <!-- contact form -->
+                <form action=https://formspree.io/f/mldwdrkk method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
 
         </div>
     </section>

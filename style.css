@@ -23,6 +23,21 @@ body {
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #111;
+    padding: 15px;
+    z-index: 1000;
+}
+
+section {
+    scroll-margin-top: 80px;
+    /* خليها قد ارتفاع الـ navbar */
+}
+
+
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,7 +65,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #7C5CFF;
+    background: #6174fc;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -73,7 +88,7 @@ nav ul li a:hover::after {
 }
 
 .header h1 span {
-    color: #7C5CFF;
+    color: #6174fc;
 }
 
 /* ///////////////////////////////// */
@@ -108,14 +123,14 @@ nav ul li a:hover::after {
 }
 
 .about-text h2 span {
-    color: #7C5CFF;
+    color: #6174fc;
     /* highlight 'Me' */
 }
 
 .about-text h3 {
     font-size: 28px;
     font-weight: 600;
-    color: #7C5CFF;
+    color: #6174fc;
     /* accent for subtitle */
     margin: 15px 0 25px;
 }
@@ -129,7 +144,7 @@ nav ul li a:hover::after {
 
 .about-text strong,
 .about-text span {
-    color: #7C5CFF;
+    color: #6174fc;
     /* highlight skills & keywords */
 }
 
@@ -145,16 +160,16 @@ nav ul li a:hover::after {
     width: 50px;
     height: 50px;
     margin-right: 15px;
-    border: 2px solid #7C5CFF;
+    border: 2px solid #6174fc;
     /* دائرة */
     border-radius: 50%;
     font-size: 22px;
-    color: #7C5CFF;
+    color: #6174fc;
     transition: 0.3s;
 }
 
 .social-icons a:hover {
-    background: #7C5CFF;
+    background: #6174fc;
     /* لون الدائرة يتملأ */
     color: #fff;
     /* الأيقونة تبقى بيضاء */
@@ -169,7 +184,7 @@ nav ul li a:hover::after {
 
 .btn {
     padding: 12px 25px;
-    background: #7C5CFF;
+    background: #6174fc;
     color: #fff;
     border-radius: 25px;
     text-decoration: none;
@@ -179,7 +194,7 @@ nav ul li a:hover::after {
 }
 
 .btn:hover {
-    background: #7C5CFF;
+    background: #6174fc;
 }
 
 .btn-outline {
@@ -193,7 +208,7 @@ nav ul li a:hover::after {
 }
 
 .btn-outline:hover {
-    background: #7C5CFF;
+    background: #6174fc;
     color: #fff;
 }
 
@@ -210,7 +225,7 @@ nav ul li a:hover::after {
 }
 
 .skills h2 span {
-    color: #7C5CFF;
+    color: #6174fc;
 }
 
 .skill-grid {
@@ -254,7 +269,7 @@ nav ul li a:hover::after {
 }
 
 .experience h2 span {
-    color: #7C5CFF;
+    color: #6174fc;
 }
 
 .slider-container {
@@ -275,7 +290,7 @@ nav ul li a:hover::after {
     background: #080800;
     border-radius: 15px;
     padding: 20px;
-    border: 1px solid #7C5CFF;
+    border: 1px solid #6174fc;
     transition: transform 0.3s;
 }
 
@@ -338,21 +353,21 @@ button.next {
 .timeline-item:hover {
     transform: translateY(-8px) scale(1.02);
     /* glowing effect أقل حدة */
-    box-shadow: 0 0 5px #7C5CFF, 0 0 10px #F7A5A5, 0 0 15px #F7A5A5;
+    box-shadow: 0 0 5px #6174fc, 0 0 10px #6174fc, 0 0 15px #6174fc;
     border: 1px solid #00dfc4;
 }
 
 /* Optional: نص مع إضاءة أهدى */
-.timeline-item:hover h3 {
-    color: #7C5CFF;
-    text-shadow: 0 0 3px #7C5CFF, 0 0 6px #7C5CFF, 0 0 10px #7C5CFF;
-}
+/* .timeline-item:hover h3 {
+    color: #6174fc;
+    text-shadow: 0 0 3px #6174fc, 0 0 6px #6174fc, 0 0 10px #6174fc;
+} */
 
 
 .timeline-item h3 {
     font-size: 24px;
     margin-bottom: 5px;
-    color: #7C5CFF;
+    color: #6174fc;
 }
 
 .timeline-item span {
@@ -360,4 +375,138 @@ button.next {
     color: #bbb;
     display: block;
     margin-bottom: 10px;
+}
+
+
+.projects {
+    background: #000000;
+    color: #fff;
+    padding: 60px;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    margin: 15px 0 10px;
+    color: #6174fc;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #bbb;
+    padding: 0 15px 15px;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0 20px;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: #6174fc;
+    border: 1px solid #6174fc;
+    padding: 5px 12px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-links a:hover {
+    background: #6174fc;
+    color: #111;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 15px #6174fc, 0 0 25px #6174fc;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.contact {
+    background: #111;
+    color: #fff;
+    padding: 60px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contact-info a {
+    color: #00dfc4;
+    text-decoration: none;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.contact-form button {
+    padding: 12px;
+    background: #6174fc;
+    color: #111;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #00a896;
 }
