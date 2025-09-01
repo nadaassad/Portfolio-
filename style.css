@@ -510,3 +510,473 @@ html {
 .contact-form button:hover {
     background: #00a896;
 }
+
+#header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0f172a;
+    /* خلفية غامقة */
+    color: white;
+    text-align: center;
+}
+
+.header h1 span {
+    color: #38bdf8;
+    /* لون مميز للأسم */
+}
+
+.subtitle {
+    color: #38bdf8;
+    /* Subtitle بلون مميز */
+}
+
+.btn {
+    background: #38bdf8;
+    color: #111;
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+}
+
+.social-icons a:hover {
+    color: #38bdf8;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+    background: #1e293b;
+    /* خلفية أفتح من الهوم */
+    color: #f8fafc;
+    /* أبيض فاتح */
+    gap: 50px;
+}
+
+.about-img img {
+    width: 280px;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.about-text h2 span {
+    color: #38bdf8;
+    /* لون مميز */
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #94a3b8;
+    /* رمادي فاتح */
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin-top: 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    background: #38bdf8;
+    color: #0f172a;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.skills {
+    padding: 80px 10%;
+    background: #0f172a;
+    /* خلفية غامقة */
+    text-align: center;
+    color: white;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.skills h2 span {
+    color: #38bdf8;
+    /* نفس اللون المميز */
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+
+.skill-card {
+    background: #1e293b;
+    /* كارت غامق */
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    background: #1e3a5f;
+    border: 1px solid #38bdf8;
+}
+
+.skill-card i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+.skill-card h3 {
+    font-size: 1.2rem;
+    color: #e2e8f0;
+    /* رمادي فاتح */
+}
+
+.experience {
+    padding: 80px 10%;
+    background: #1e293b;
+    /* خلفية غامقة */
+    color: white;
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.experience h2 span {
+    color: #38bdf8;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 700px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: #38bdf8;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 30px;
+    background: #0f172a;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    background: #1e3a5f;
+}
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.timeline-item span {
+    display: block;
+    font-size: 0.9rem;
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+/* محاذاة العناصر يمين وشمال */
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    background: #38bdf8;
+    border-radius: 50%;
+    border: 3px solid #0f172a;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -12px;
+    right: auto;
+}
+
+.projects {
+    padding: 80px 10%;
+    background: #0f172a;
+    /* خلفية غامقة */
+    color: white;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.projects h2 span {
+    color: #38bdf8;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: left;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    background: #1e3a5f;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.project-card span {
+    display: block;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #cbd5e1;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.project-links a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 15px;
+    border: 2px solid #38bdf8;
+    border-radius: 8px;
+    color: #38bdf8;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+    background: #38bdf8;
+    color: #111;
+}
+
+.contact {
+    padding: 80px 10%;
+    background: #0f172a;
+    /* خلفية غامقة */
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.contact h2 span {
+    color: #38bdf8;
+}
+
+/* social icons */
+.social-icons {
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    color: #cbd5e1;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #38bdf8;
+    transform: scale(1.2);
+}
+
+/* contact form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 2px solid #1e293b;
+    background: #1e293b;
+    color: white;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+.contact-form button {
+    padding: 12px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background: #0ea5e9;
+    transform: translateY(-3px);
+}
+
+/* navbar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.9);
+    /* خلفية شفافة */
+    backdrop-filter: blur(10px);
+    /* زجاجي */
+    z-index: 1000;
+}
+
+/* logo */
+nav .Logo {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+nav .Logo:hover {
+    transform: scale(1.1);
+}
+
+/* menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+}
+
+nav ul li a:hover {
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+}
+
+/* لما يبقى Active Section */
+nav ul li a.active {
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        right: 10%;
+        background: #0f172a;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+}
