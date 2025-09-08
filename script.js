@@ -11,3 +11,4 @@ next.addEventListener('click', () => {
 prev.addEventListener('click', () => {
     slider.scrollBy({ left: -320, behavior: 'smooth' });
 });
+
