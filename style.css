@@ -5,22 +5,15 @@
     box-sizing: border-box;
 }
 
-
 body {
-    background: #080800;
-    color: #fff;
+    background: #4682A9;
+    /* لون فاتح بدلاً من الأسود */
+    color: #000;
+    /* النص أسود عشان يبان */
 }
 
-#header {
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
 
-.container {
-    padding: 10px 10%;
-}
+
 
 nav {
     position: fixed;
@@ -42,10 +35,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.Logo {
-    width: 140px;
 }
 
 nav ul li {
@@ -77,9 +66,29 @@ nav ul li a:hover::after {
 
 }
 
+.Logo {
+    font-size: 28px;
+    /* حجم النص */
+    font-weight: bold;
+    /* تخلي النص عريض */
+    color: #4682A9;
+    /* لون النص */
+    font-family: 'Poppins', sans-serif;
+    /* تختاري الخط */
+}
+
+
 .header {
-    margin-top: 20%;
-    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 10%;
+}
+
+.header-text {
+    flex: 1;
+    text-align: left;
 }
 
 .header h1 {
@@ -88,94 +97,159 @@ nav ul li a:hover::after {
 }
 
 .header h1 span {
-    color: #6174fc;
+    color: #4682A9;
 }
 
-/* ///////////////////////////////// */
-
-.About {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2rem;
-    /* a bit more breathing space */
-    padding: 50px 10%;
-    /* nice spacing from edges */
+.header-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
-.about-img img {
-    width: 100%;
-    max-width: 350px;
-    /* control image size */
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+.header-img img {
+    width: 300px;
+    /* تقدري تتحكمي في الحجم */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* يخليها دائرية */
+    border: 5px solid #333;
+    /* إطار حوالين الصورة */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    /* ظل بسيط */
 }
-
-.about-text {
-    text-align: left;
-    /* text stays left-aligned inside the right column */
-}
-
-.about-text h2 {
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
-}
-
-.about-text h2 span {
-    color: #6174fc;
-    /* highlight 'Me' */
-}
-
-.about-text h3 {
-    font-size: 28px;
-    font-weight: 600;
-    color: #6174fc;
-    /* accent for subtitle */
-    margin: 15px 0 25px;
-}
-
-.about-text p {
-    color: #ddd;
-    font-size: 18px;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-}
-
-.about-text strong,
-.about-text span {
-    color: #6174fc;
-    /* highlight skills & keywords */
-}
-
 
 .social-icons {
-    margin: 20px 0;
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    /* المسافة بين الأيقونات */
 }
 
 .social-icons a {
-    display: inline-flex;
-    justify-content: center;
+    width: 45px;
+    height: 45px;
+    display: flex;
     align-items: center;
-    width: 50px;
-    height: 50px;
-    margin-right: 15px;
-    border: 2px solid #6174fc;
-    /* دائرة */
+    justify-content: center;
     border-radius: 50%;
-    font-size: 22px;
-    color: #6174fc;
-    transition: 0.3s;
+    /* يخليها دائرية */
+    background: #4682A9;
+    /* خلفية غامقة */
+    color: #fff;
+    /* لون الأيقونة */
+    font-size: 20px;
+    transition: 0.3s ease;
+    text-decoration: none;
 }
 
 .social-icons a:hover {
-    background: #6174fc;
-    /* لون الدائرة يتملأ */
-    color: #fff;
-    /* الأيقونة تبقى بيضاء */
-    transform: scale(1.1);
-    /* تكبر شوية */
+    background: #4682A9;
+    /* لون عند الهوفر */
+    transform: translateY(-5px);
+    /* حركة لفوق بسيطة */
+    box-shadow: 0 4px 15px rgba(97, 116, 252, 0.5);
 }
+
+/* أزرار الـ CTA */
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    /* مسافة بين الزرين */
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+/* الزر الأساسي */
+.btn {
+    background: #4682A9;
+    color: #FFFBDE;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    background: #749BC2;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(70, 130, 169, 0.4);
+}
+
+/* الزر الثانوي */
+.btn.secondary {
+    background: #FFFBDE;
+    color: #4682A9;
+    border: 2px solid #4682A9;
+}
+
+.btn.secondary:hover {
+    background: #91C8E4;
+    color: #fff;
+    border-color: #749BC2;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(116, 155, 194, 0.4);
+}
+
+
+/* ///////////////////////////////// */
+
+/* ===== About Section ===== */
+#about {
+    padding: 80px 0;
+    background: #0f172a;
+    /* نفس خلفية الهوم */
+    color: #fff;
+    text-align: center;
+    /* يوسّط كل النصوص */
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    /* يوسّط الكونتينر */
+}
+
+.about-text {
+    max-width: 700px;
+    /* عشان السطر مايبقاش طويل قوي */
+    margin: 0 auto;
+    /* يوسّط البوكس */
+}
+
+.about-text h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #91C8E4;
+}
+
+.about-text h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #749BC2;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #FFFBDE;
+}
+
+/* الأزرار */
+.about-buttons {
+    display: flex;
+    justify-content: center;
+    /* يخلي الأزرار في النص */
+    gap: 15px;
+}
+
 
 /* Buttons under icons */
 .buttons {
@@ -552,7 +626,7 @@ html {
     align-items: center;
     justify-content: center;
     padding: 80px 10%;
-    background: #1e293b;
+    background: #0f172a;
     /* خلفية أفتح من الهوم */
     color: #f8fafc;
     /* أبيض فاتح */
@@ -665,7 +739,7 @@ html {
 
 .experience {
     padding: 80px 10%;
-    background: #1e293b;
+    background: #4682A9;
     /* خلفية غامقة */
     color: white;
     text-align: center;
@@ -979,4 +1053,63 @@ nav ul li a.active {
     nav ul.show {
         display: flex;
     }
+}
+
+.skills {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #91C8E4;
+}
+
+.skills h2 span {
+    color: #749BC2;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
+    /* مسافة أفقية */
+    row-gap: 20px;
+    /* مسافة رأسية */
+    justify-items: center;
+}
+
+
+
+.skill-card {
+    background: #4682A9;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 120px;
+    /* حجم ثابت لكل كارت */
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card i {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.skill-card h3 {
+    font-size: 18px;
+    color: #FFFBDE;
+}
+
+body {
+    background: #4682A9;
+    /* لون فاتح بدلاً من الأسود */
+    color: #000;
+    /* النص أسود عشان يبان */
 }
